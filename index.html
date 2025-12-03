@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IronCore Fitness Club</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="logo">IRONCORE <span>FITNESS</span></div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#classes">Schedule</a></li>
+            <li><a href="#trainers">Trainers</a></li>
+            <li><a href="#membership">Membership</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+        <button class="join-btn" onclick="scrollToMembership()">Join Now</button>
+    </nav>
+
+    <header id="home">
+        <div class="hero-content">
+            <h1>UNLEASH YOUR <span class="accent-text">POTENTIAL</span></h1>
+            <p>Join the best gym in the city. Professional trainers, modern equipment, and a community that pushes you further.</p>
+            <a href="#membership" class="cta-button">Get Started</a>
+        </div>
+    </header>
+
+    <section id="classes" class="container">
+        <h2 class="section-title">Weekly Class Schedule</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Monday</th>
+                        <th>Wednesday</th>
+                        <th>Friday</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>06:00 AM</td>
+                        <td>Yoga Flow</td>
+                        <td>Cardio Blast</td>
+                        <td>Yoga Flow</td>
+                    </tr>
+                    <tr>
+                        <td>08:00 AM</td>
+                        <td>CrossFit</td>
+                        <td>HIIT</td>
+                        <td>CrossFit</td>
+                    </tr>
+                    <tr>
+                        <td>06:00 PM</td>
+                        <td>Zumba</td>
+                        <td>Power Lifting</td>
+                        <td>Kickboxing</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="trainers" class="dark-section">
+        <h2 class="section-title">Meet Your Trainers</h2>
+        <div class="card-grid">
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=400&auto=format&fit=crop&q=60" alt="Trainer">
+                <h3>Vikram Singh</h3>
+                <p>Strength & Conditioning Expert</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1609899536559-00109633e9b0?w=400&auto=format&fit=crop&q=60" alt="Trainer">
+                <h3>Anjali Sharma</h3>
+                <p>Yoga & Pilates Specialist</p>
+            </div>
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=400&auto=format&fit=crop&q=60" alt="Trainer">
+                <h3>Rohan Das</h3>
+                <p>CrossFit Head Coach</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="membership" class="container">
+        <h2 class="section-title">Membership Plans</h2>
+        <div class="pricing-grid">
+            <div class="price-card">
+                <h3>Silver</h3>
+                <div class="price">₹1,500 <span class="month">/mo</span></div>
+                <ul>
+                    <li>Gym Access (6 AM - 10 AM)</li>
+                    <li>Locker Access</li>
+                    <li>General Guidance</li>
+                </ul>
+                <button onclick="selectPlan('Silver')">Choose Silver</button>
+            </div>
+            <div class="price-card best-value">
+                <div class="badge">Most Popular</div>
+                <h3>Gold</h3>
+                <div class="price">₹2,500 <span class="month">/mo</span></div>
+                <ul>
+                    <li>24/7 Gym Access</li>
+                    <li>All Group Classes</li>
+                    <li>Free Diet Consultation</li>
+                </ul>
+                <button onclick="selectPlan('Gold')">Choose Gold</button>
+            </div>
+            <div class="price-card">
+                <h3>Platinum</h3>
+                <div class="price">₹5,000 <span class="month">/mo</span></div>
+                <ul>
+                    <li>All Gold Benefits</li>
+                    <li>4 Personal Training Sessions</li>
+                    <li>Spa & Sauna Access</li>
+                </ul>
+                <button onclick="selectPlan('Platinum')">Choose Platinum</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="dark-section">
+        <h2 class="section-title">Fitness Tips & Tools</h2>
+        
+        <div class="blog-container">
+            <div class="blog-post">
+                <h4>Top 5 Protein Sources</h4>
+                <p>Learn why eggs, chicken breast, and lentils are essential for muscle repair after a heavy workout.</p>
+            </div>
+            <div class="blog-post">
+                <h4>Why Sleep Matters</h4>
+                <p>Muscles don't grow in the gym; they grow while you sleep. Aim for 7-8 hours of quality rest.</p>
+            </div>
+            
+            <div class="bmi-calculator">
+                <h4>Check Your BMI</h4>
+                <input type="number" id="weight" placeholder="Weight (kg)">
+                <input type="number" id="height" placeholder="Height (cm)">
+                <button onclick="calculateBMI()">Calculate</button>
+                <p id="bmi-result"></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 IronCore Fitness Club. All Rights Reserved.</p>
+        <p>Location: Indiranagar, Bangalore | Phone: +91 98765 43210</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
